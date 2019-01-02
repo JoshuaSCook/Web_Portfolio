@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Solar System</title>
+
+        <!-- style sheets -->
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        
+        <!-- jQuery.js link -->
+        <script type="text/javascript" src="javascript/jquery.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!-- smooth scrolling -->
+        <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                // scrollTop: $(hash).offset().top
+                scrollTop: $(hash).offset().top - $(window).height() / 2 + $(hash).height() / 2
+              }, 10000, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        </script>
+        
+        <!-- distance display -->
+        <script>
+        const numberWithCommas = (x) => {
+            var parts = x.toString().split(".");
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            return parts.join(".");
+        }
+            
+        $(function getDistance() {
+            setInterval(function() {
+                document.getElementById("km").textContent=numberWithCommas($(document).scrollTop() * 1390) + " km";
+                
+                document.getElementById("au").textContent=numberWithCommas(($(document).scrollTop() / 107622).toFixed(2)) + " AU";
+            }, 10);
+        });
+        </script>
+    </head>
+    
+    <body>    
+        <ul id="navigation">
+            <li><a href="#the_sun">THE SUN</a></li>
+            <li><a href="#mercury">MERCURY</a></li>
+            <li><a href="#venus">VENUS</a></li>
+            <li><a href="#earth">EARTH</a></li>
+            <li><a href="#mars">MARS</a></li>
+            <li><a href="#jupiter">JUPITER</a></li>
+            <li><a href="#saturn">SATURN</a></li>
+            <li><a href="#uranus">URANUS</a></li>
+            <li><a href="#neptune">NEPTUNE</a></li>
+            <li><a href="#pluto">PLUTO</a></li>
+        </ul>
+        
+        <p id="km" class="distance"></p>
+        <p id="au" class="distance"></p>
+        
+        <div id="solar_system">            
+            <div id="the_sun" class="planet">THE SOLAR SYSTEM</div> 
+            
+            <div id="mercury" class="planet"></div>
+            
+            <div id="venus" class="planet"></div>
+            
+            <div id="earth" class="planet"><div id="earth_ice"></div></div>
+            <h1>EARTH</h1>
+            <p>Some nice text here about the earth.</p>
+            
+            <div id="mars" class="planet"><div id="mars_ice"></div></div>
+            
+            <div id="jupiter" class="planet"><div id="jupiter_pole"></div></div>
+            
+            <div id="saturn" class="planet"><div id="saturn_rings"><div id="ring_gap"><div id="saturn_pole"><div id="shadow"></div></div></div></div></div>
+            
+            <div id="uranus" class="planet"><div id="uranus_rings"></div></div>
+            
+            <div id="neptune" class="planet"></div>
+            
+            <div id="pluto" class="planet"></div>  
+        </div>
+    </body>
+</html>
