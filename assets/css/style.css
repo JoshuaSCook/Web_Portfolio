@@ -1,73 +1,106 @@
 body {
     font-family: monospace;
 }
-
 header {
     width: 100%;
     height: 60px;
     display: block;
     background-color: black;
     position: fixed;
+    z-index: 99;
 }
-
 header * {
     color: white
 }
-
 nav {
     position: fixed;
     top: 40px;
     right: 20%;
 }
-
 nav ul li {
     display: inline;
     margin-left: 20px;
 }
-
 #splash {
     padding-left: 20%;
     padding-right: 20%;
     min-height: 100vh;
     background-color: black;
 }
-
 #splash * {
     color: white
 }
-
 #my-name {
     font-size: 72px;
     padding-top: 40%;
 }
-
 main {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 12%;
+    padding-right: 12%;
 }
-
 section {
     padding-top: 80px;
     padding-bottom: 144px;
 }
-
 #about a {
     display: block;
 }
-
-.project-placeholder {
-    display: inline-block;
-    background-color: yellow;
-    width: 200px;
-    height: 200px;
+.project {
+    display: inline-flex;
+    background-size: 100% 100%;
+    width: 300px;
+    height: 300px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
-
+.rollover-content {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 36px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .3s ease-in-out;
+}
+.project:hover .rollover-content {
+    opacity: 1;
+    visibility: visible;
+}
+.project-name {
+    color: white;
+}
+.description {
+    color: white;
+    font-size: 16px;
+}
+.github-link {
+    position: absolute;
+    bottom: 50px;
+    left: 36px;
+    font-size: 21px;
+    color: white;
+    border: 2px solid white;
+    padding: 8px;
+}
+.project-link {
+    position: absolute;
+    bottom: 50px;
+    right: 36px;
+    font-size: 21px;
+    color: white;
+    border: 2px solid white;
+    padding: 8px;
+}
+.github-link:hover {
+    background-color: white;
+    color: black;
+}
+.project-link:hover {
+    background-color: white;
+    color: black;
+}
 #contact a {
     display: block;
 }
-
 h1 {
     font-family: "helvetica";
     font-weight: 700;
@@ -75,61 +108,50 @@ h1 {
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-
 h2 {
     font-size: 24px;
 }
-
 h3, a, li, label {
     font-size: 18px;
 }
-
 p {
     font-size: 14px;
 }
-
 a {
     text-decoration: none;
 }
-
 form * {
     display: block;
 }
-
 input {
     width: 100%;
 }
-
 textarea {
     width: 100%;
     height: 200px;
 }
-
 footer {
     padding-left: 20%;
     padding-right: 20%;
 }
-
 #burgerfi {
     background-image: url(../images/burgerfi.jpg)
 }
-
+#kansas-cash {
+    background-image: url(../images/lottery.jpg)
+}
 #solar-system {
     background-image: url(../images/solarsystem.jpg)
 }
-
 #helvetica {
     background-image: url(../images/helvetica.jpg)
 }
-
 #casa-de-benavidez {
     background-image: url(../images/casadebenavidez.jpg)
 }
-
 #hawkins-observatory {
     background-image: url(../images/hawkinsobservatory.jpg)
 }
-
 #cosmic-cafe {
     background-image: url(../images/cosmiccup.jpg)
 }
