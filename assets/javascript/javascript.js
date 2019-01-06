@@ -3,6 +3,7 @@ var technologies = [
     "CSS3",
     "Javascript",
     "jQuery",
+    "JSON",
     "Bootstrap",
     "SEO",
     "Python",
