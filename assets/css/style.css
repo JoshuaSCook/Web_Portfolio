@@ -15,12 +15,16 @@ header * {
 }
 nav {
     position: fixed;
-    top: 40px;
+    top: 32px;
     right: 15%;
 }
 nav ul li {
     display: inline;
     margin-left: 20px;
+    padding-bottom: 5px;
+}
+nav ul li:hover {
+    border-bottom: 3px solid white;
 }
 #splash {
     padding-left: 20%;
