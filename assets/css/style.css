@@ -1,5 +1,6 @@
 body {
     font-family: monospace;
+    background-color: #F8F8F8;
 }
 header {
     width: 100%;
@@ -15,7 +16,7 @@ header * {
 nav {
     position: fixed;
     top: 40px;
-    right: 20%;
+    right: 15%;
 }
 nav ul li {
     display: inline;
@@ -35,12 +36,12 @@ nav ul li {
     padding-top: 40%;
 }
 main {
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 section {
     padding-top: 80px;
-    padding-bottom: 144px;
+    padding-bottom: 64px;
 }
 #about a {
     display: block;
@@ -50,8 +51,8 @@ section {
     background-size: 100% 100%;
     width: 300px;
     height: 300px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 .rollover-content {
     position: relative;
@@ -131,8 +132,14 @@ textarea {
     height: 200px;
 }
 footer {
-    padding-left: 20%;
-    padding-right: 20%;
+    background-color: black;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+footer * {
+    color: white;
 }
 #burgerfi {
     background-image: url(../images/burgerfi.jpg)
